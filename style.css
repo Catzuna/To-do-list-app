@@ -36,6 +36,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-right: 4px;
 }
 
 button:hover {
@@ -48,8 +49,10 @@ ul {
 }
 
 li {
-    margin-bottom: 15px; 
-    background-color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
     padding: 12px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -62,10 +65,21 @@ li:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+li.time {
+    background-color: #555;
+    border: 1px solid #a5b991;
+    width: calc(50% - 10px);
+}
+
+li.done {
+    background-color: #777;
+    border: 1px solid #c0d9a9;
+    width: calc(50% - 10px);
+}
+
 li button {
-    margin-left: 8px;
     background-color: #a5b991;
-    color: #333; 
+    color: #333;
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -76,27 +90,32 @@ li button:hover {
     background-color: #c0d9a9;
 }
 
-
-
-
-
-
-/* Mobile view */
 @media (max-width: 600px) {
     body {
         margin: 10px;
     }
     li {
         margin-bottom: 12px;
+        width: 100%;
+    }
+    li.time,
+    li.done {
+        width: 100%;
+    }
+    button {
+        margin-right: 0;
+        margin-bottom: 8px; 
     }
 }
 
-/* Desktop view */
 @media (min-width: 601px) {
     body {
         margin: 20px;
     }
     li {
         margin-bottom: 15px;
+    }
+    li button {
+        margin-right: 2px; 
     }
 }

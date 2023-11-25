@@ -54,9 +54,9 @@ function displayTasks() {
 
 function animate3DTransform(element) {
     element.style.transition = 'transform 0.5s ease';
-    element.style.transform = 'rotateX(360deg)'; // Adjust the rotation as needed
+    element.style.transform = 'rotateX(360deg)'; 
 
-    // Reset the transform after the animation completes
+
     setTimeout(() => {
         element.style.transform = 'rotateX(0)';
     }, 500);
